@@ -23,3 +23,20 @@ The pipeline is structured into clear stages:
 
 ## Status
 Project initialized. ETL components will be added incrementally.
+
+## How to Run the Pipeline
+
+1. Ensure Python and required libraries are installed.
+2. Place raw input data in the `data/` directory.
+3. Run the pipeline using:
+
+```bash
+python src/main.py
+
+## Interview Scenarios
+
+- If extraction fails, the pipeline logs the error and stops execution.
+- If transformation removes invalid records, the changes are logged with row counts.
+- If loading fails, no partial output is considered successful.
+- Validation logic can be extended without changing extract or load steps.
+
